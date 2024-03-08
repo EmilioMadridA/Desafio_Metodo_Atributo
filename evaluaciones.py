@@ -1,4 +1,5 @@
-# Clase externa
+# Funciones externa
+from ingredientes import ingredientes_proteicos, ingredientes_vegetales, tipos_de_masa
 from pizza import Pizza
 
 # a. Mostrar los valores de los atributos de clase sin crear una instancia
@@ -13,9 +14,12 @@ mi_pizza = Pizza()
 mi_pizza.realizar_pedido()
 
 # d. Mostrar los detalles del pedido realizado
-print(f"Ingredientes vegetales: {mi_pizza.ingredientes_vegetales}")
+print('\n')
+print('### --- PEDIDO --- ###')
 print(f"Ingrediente proteico: {mi_pizza.ingrediente_proteico}")
+print(f"Ingredientes vegetales: {', '.join(mi_pizza.ingredientes_vegetales)}")
 print(f"Tipo de masa: {mi_pizza.tipo_de_masa}")
+print('\n')
 print(f"¿Es la pizza válida?: {'Sí' if mi_pizza.es_valida else 'No'}")
 
 # e. Intentar mostrar si la clase Pizza es válida sin crear una instancia (esto debería generar un error)
